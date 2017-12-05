@@ -1,6 +1,9 @@
 package at.namanuel;
 
 import java.io.*;
+import java.nio.charset.Charset;
+import java.nio.file.*;
+import java.text.DecimalFormat;
 import java.util.*;
 
 public class CircleDemo {
@@ -13,8 +16,11 @@ public class CircleDemo {
 
     public static void main(String[] args){
         InOut io = new InOut();
-        String input, output;
-        String color = "";
+        List<Circle> circlelist = new ArrayList<>();
+        List<String> outputlist = new ArrayList<String>();
+        String input = "", output = "",color = "";
+        DecimalFormat df = new DecimalFormat(".###");
+        //df.format(myNumber)
         double r = 0;
         if(args.length == 4){
             io.read(input = args[0]);
@@ -25,20 +31,34 @@ public class CircleDemo {
         else{
             printHelp();
         }
+        circlelist = io.getList();
+        Circle cinput = new Circle(r, color);//input circle
+        for (Circle c: circlelist){
+            c.getmColor();
+            c.getmRadius();
+            if(cinput.hasColorAs(c)){
+                outputlist.add(c.getmColor() +"; " + Double.toString(c.getmRadius())+"; " +df.format(c.calculateAreaDifference(cinput)));
+            }
 
 
+        }
+        /*for (String s:outputlist){
+            System.out.println(s);
+        }*/
+        Path file = Paths.get(output);
+        try {
+            Files.write(file, outputlist, Charset.forName("UTF-8"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-        //Circle c1 = new Circle();
-        Circle c2 = new Circle(r, color);
-        //double calarea;
-        //c1.setmRadius(7.6);
-        //c1.setmColor("Blue");
+
         //calarea = c1.calculateAreaDifference(c2);
         //Circle c3 = c1;
 
         //System.out.println("Color: Circle 1 = Circle 3 : " + c3.hasColorAs(c1));
         //System.out.println("Color: Circle 2 = Circle 3 : " + c3.hasColorAs(c2));
-        c2.printInformation();
+
 
         //System.out.println("Area difference Circle 1 and Circle 2: " + Math.round(calarea));
     }

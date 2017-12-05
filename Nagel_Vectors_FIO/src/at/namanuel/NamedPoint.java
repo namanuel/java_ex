@@ -23,18 +23,7 @@ public class NamedPoint extends Point2D.Double {
         }
     }
     /*
-    public void write(String output){
-        File f = new File(output);
-        if(!f.exists()){
-            try {
-                PrintWriter creator = new PrintWriter(output);
-                creator.close();
-            }
-            catch (Exception e) {
-                Point2DMain.printHelp();
-            }
-        }
-    }
+
     */
     /*
     public void ausgabe(){
