@@ -2,21 +2,43 @@ package at.namanuel;
 
 public class Circle {
 
+    private String mColor;
+    private double mRadius;
+    public Circle(){ //default constructor
 
+    }
+    public double getmRadius(){
+        return mRadius;
+    }
+    public void setmRadius(double mRadius){
+        this.mRadius = mRadius;
+    }
+    public String getmColor(){
+        return mColor;
+    }
+    public void setmColor(String mColor){
+        this.mColor = mColor;
+    }
+    public Circle(double mRadius, String mColor){
+        setmRadius(mRadius);
+        setmColor(mColor);
+    }
+    public double calculatedArea(){
+        return Math.PI * getmRadius() * getmRadius();
+    }
+    public double calculateAreaDifference(Circle circle){
+        return (Math.PI * this.getmRadius() * this.getmRadius()) - (Math.PI * circle.getmRadius() * circle.getmRadius());
+    }
+    public boolean hasColorAs(Circle circle){
+        //if(circle.getmColor() == this.getmColor()){
+        if(this.getmColor().equals(circle.getmColor())){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public void printInformation(){
+        System.out.println("Cricle radius: " + getmRadius() + "\nArea: "+ Math.round(calculatedArea()) + "\nColor: " + getmColor());
 
-    public static void main(String[] args){
-        Helper help1 = new Helper();
-        Helper help2 = new Helper(5.2, "Yellow");
-        double calarea;
-        help1.setmRadius(7.6);
-        help2.setmColor("Blue");
-        calarea = help1.calculateAreaDifference(help2);
-        Helper help3 = help1;
-
-        System.out.println("Color: Circle 1 = Circle 3 : " + help3.hasColorAs(help1));
-        System.out.println("Color: Circle 2 = Circle 3 : " + help3.hasColorAs(help2));
-        help2.printInformation();
-
-        System.out.println("Area difference Circle 1 and Circle 2: " + Math.round(calarea));
     }
 }
