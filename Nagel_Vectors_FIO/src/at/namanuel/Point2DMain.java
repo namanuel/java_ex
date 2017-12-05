@@ -1,7 +1,5 @@
 package at.namanuel;
 
-import java.util.Random;
-
 public class Point2DMain {
     public static void printHelp(){
         System.out.println("Input: inputfilename + path and outputfilename"
@@ -10,17 +8,24 @@ public class Point2DMain {
     }
 
     public static void main(String[] args) {
-        InOutput inout = new InOutput();
-        String input, output;
+        NamedPoint napoint = new NamedPoint();
+        String input, output, name;
+        double x, y;
         if(args.length == 5){
-            inout.read(input = args[0]);
-            inout.write(output = args[1]);
+            napoint.read(input = args[0]);
+            napoint.write(output = args[1]);
+
+            napoint.setName(name = args[2]);
+            napoint.setX(x = Double.parseDouble(args[3]));
+            napoint.setY(y = Double.parseDouble(args[4]));
         }
         else{
             printHelp();
         }
 
-        inout.ausgabe();
+        napoint.printInformation();
+
+        //napoint.ausgabe();
         /*
         Point2D pointA = new Point2D();
         pointA.setName("origin");
