@@ -24,7 +24,7 @@ public class Circle {
 
     public boolean hasColorAs(Circle circle){
         //if(circle.getmColor() == this.getmColor()){
-        if(this.getmColor().equals(circle.getmColor())){
+        if(this.getmColor().equalsIgnoreCase(circle.getmColor())){
             return true;
         }else{
             return false;
@@ -46,6 +46,8 @@ public class Circle {
         return mColor;
     }
     public void setmColor(String mColor){
-        this.mColor = mColor;
+        if (mColor != null) {
+            this.mColor = mColor;
+        }
     }
 }

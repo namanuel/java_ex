@@ -16,14 +16,16 @@ public class CircleDemo {
 
     public static void main(String[] args){
         InOut io = new InOut();
-        List<Circle> circlelist = new ArrayList<>();
-        List<String> outputlist = new ArrayList<String>();
-        String input = "", output = "",color = "";
-        DecimalFormat df = new DecimalFormat(".###");
-        //df.format(myNumber)
+        List<Circle> listOfCircles = new ArrayList<>();
+        List<String> listOfOutputs = new ArrayList<>();
+        String output = "",color = "";
+        DecimalFormat df = new DecimalFormat(".###");//Format aus der Angabe angeben ^^
         double r = 0;
+
         if(args.length == 4){
-            io.read(input = args[0]);
+
+            //Consolen eingabe wird "verteilt"
+            io.read(args[0]);
             output = args[1];
             color = args[2];
             r = Double.parseDouble(args[3]);
@@ -31,13 +33,13 @@ public class CircleDemo {
         else{
             printHelp();
         }
-        circlelist = io.getList();
+        listOfCircles = io.getList();
         Circle cinput = new Circle(r, color);//input circle
-        for (Circle c: circlelist){
+        for (Circle c: listOfCircles){
             c.getmColor();
             c.getmRadius();
             if(cinput.hasColorAs(c)){
-                outputlist.add(c.getmColor() +"; " + Double.toString(c.getmRadius())+"; " +df.format(c.calculateAreaDifference(cinput)));
+                listOfOutputs.add(c.getmColor() +"; " + Double.toString(c.getmRadius())+"; " +df.format(c.calculateAreaDifference(cinput)));
             }
 
 
@@ -47,20 +49,11 @@ public class CircleDemo {
         }*/
         Path file = Paths.get(output);
         try {
-            Files.write(file, outputlist, Charset.forName("UTF-8"));
+            Files.write(file, listOfOutputs, Charset.forName("UTF-8"));
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-
-        //calarea = c1.calculateAreaDifference(c2);
-        //Circle c3 = c1;
-
-        //System.out.println("Color: Circle 1 = Circle 3 : " + c3.hasColorAs(c1));
-        //System.out.println("Color: Circle 2 = Circle 3 : " + c3.hasColorAs(c2));
-
-
-        //System.out.println("Area difference Circle 1 and Circle 2: " + Math.round(calarea));
     }
 
 
