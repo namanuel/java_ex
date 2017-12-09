@@ -44,9 +44,7 @@ public class CircleDemo {
 
 
         }
-        /*for (String s:outputlist){
-            System.out.println(s);
-        }*/
+        //Daten werden ins OutputFile geschrieben
         Path file = Paths.get(output);
         try {
             Files.write(file, listOfOutputs, Charset.forName("UTF-8"));
