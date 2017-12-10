@@ -44,6 +44,9 @@ public class CircleDemo {
 
 
         }
+        for(String o : listOfOutputs){
+            System.out.println(o);
+        }
         //Daten werden ins OutputFile geschrieben
         Path file = Paths.get(output);
         try {
