@@ -15,7 +15,6 @@ public class Bicycle extends Vehicle {
     public String getDriverName() {
         return driverName;
     }
-
     public void setDriverName(String driverName) {
         this.driverName = driverName;
     }
@@ -24,7 +23,6 @@ public class Bicycle extends Vehicle {
     public int getPassenger() {
         return passenger;
     }
-
     public void setPassenger(int passenger) {
         this.passenger = passenger;
     }

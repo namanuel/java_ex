@@ -1,6 +1,8 @@
 package vehicles;
 
-public class Car extends Vehicle{
+import motorsports.Competitive;
+
+public class Car extends Vehicle implements Competitive{
     private String copilotName;
     private String driverName;
     private int passenger;
@@ -34,6 +36,7 @@ public class Car extends Vehicle{
     public void setPassenger(int passenger) {
         this.passenger = passenger;
     }
+
     public int getSeatCapacity () {
         return seats;
     }
@@ -43,5 +46,10 @@ public class Car extends Vehicle{
     }
     public boolean hasEngine(){
         return false;
+    }
+
+    @Override
+    public void race() {
+
     }
 }

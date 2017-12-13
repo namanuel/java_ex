@@ -11,16 +11,14 @@ public class Ship extends Vehicle {
     public int getPassenger() {
         return passenger;
     }
-
     public void setPassenger(int passenger) {
         this.passenger = passenger;
     }
 
-
+    @Override
     public int getSeatCapacity () {
         return seats;
     }
-
     public void setSeatCapacity(int seats) {
         this.seats = seats;
     }
@@ -31,7 +29,7 @@ public class Ship extends Vehicle {
     public Ship(String captainName, int passenger, int seats, boolean engine){
 
     }
-
+    @Override
     public String toString(){
         return "";
     }
