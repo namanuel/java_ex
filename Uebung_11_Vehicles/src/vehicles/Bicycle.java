@@ -1,6 +1,8 @@
 package vehicles;
 
-public class Bicycle extends Vehicle {
+import motorsports.Competitive;
+
+public class Bicycle extends Vehicle implements Competitive{
     private String driverName;
     private int passenger;
     private int seat;
@@ -9,7 +11,7 @@ public class Bicycle extends Vehicle {
 
     }
     public Bicycle(String driverName){
-
+        this.driverName = driverName;
     }
 
     public String getDriverName() {
@@ -36,5 +38,10 @@ public class Bicycle extends Vehicle {
     }
     public boolean hasEngine(){
         return false;
+    }
+
+    @Override
+    public void race() {
+        System.out.println("Bike " + getDriverName() + " on Track");
     }
 }

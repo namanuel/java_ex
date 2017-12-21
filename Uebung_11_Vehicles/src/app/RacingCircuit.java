@@ -6,13 +6,26 @@ import vehicles.*;
 import java.util.ArrayList;
 
 public class RacingCircuit {
-    public void main(String[] args){
+    public static void main(String[] args){
         // Create ArrayList of `Vehicle`s.
 
         ArrayList<Vehicle> starterList = new ArrayList<>();
         Competitive competitor;
 
         // TODO: Add different vehicles to the list (of starters)
+        Bicycle bike = new Bicycle("Axel Stein");
+        Car c1 = new Car("Herbie","Jim Douglas",2);
+        Car c2 = new Car("Jean-Pierre","Matthias Malmedie",2);
+        Car c3 = new Car("K.I.T.T","Michael Knight",2);
+        Ship s1 = new Ship("Pirate Ship","Blackbeard",50,70,false);
+        Ship s2 = new Ship("Pirate Ship", "Monkey D. Luffy",10,10,false);
+
+        starterList.add(c1);
+        starterList.add(c2);
+        starterList.add(c3);
+        starterList.add(bike);
+        starterList.add(s1);
+        starterList.add(s2);
 
         // First all bicycles start.
         for (Vehicle bicycle : starterList) {

@@ -2,9 +2,19 @@ package vehicles;
 
 public class Ship extends Vehicle {
     private String captainName;
+    private String shipType;
     private boolean engine;
     private int passenger;
     private int seats;
+
+    public Ship(String shipType, String captainName, int passenger, int seats, boolean engine){
+        this.captainName = captainName;
+        this.passenger = passenger;
+        this.seats = seats;
+        this.engine = engine;
+        this.shipType = shipType;
+
+    }
 
 
     @Override
@@ -26,11 +36,8 @@ public class Ship extends Vehicle {
         return true;
     }
 
-    public Ship(String captainName, int passenger, int seats, boolean engine){
-
-    }
     @Override
     public String toString(){
-        return "";
+        return shipType + "[p:" + passenger + "|s:" + seats +"|cap:" + captainName + "]";
     }
 }
