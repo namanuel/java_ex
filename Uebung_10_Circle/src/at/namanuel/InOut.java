@@ -12,6 +12,7 @@ public class InOut {
         int i = 0;
         double radius = 0;
         String color = "";
+        String fields[];
         list = new ArrayList<Circle>();
         String line;
         FileReader fr = null;
@@ -30,36 +31,10 @@ public class InOut {
 
             while (br.hasNext()) {
                 line = br.nextLine();
-//            if (br.hasNextDouble()) {
-//                System.out.println(br.nextDouble());
-//            }
-//            else{
-//                System.out.println(br.next());
-//            }
-                for (String w : line.split(";")) {
-                /*
-                hier wird die eingelesene Zeile gesplitet
-                es gibt sicher eine schönere Methode, aber ich hab sie einfach nicht zum laufen gebracht
-                zeile wird in String "Farbe" und Double "Radius" geteilt
-                wenn es anderes herum eingegeben wird crasht es sowieso schon bei der Abfrage ob die Argumente die Richtigen sind
-                */
-                    try {
-                        if (i == 0) {
-                            color = w;
-                            i++;
-                        } else {
-                            radius = Double.parseDouble(w);
-                            i = 0;
-                        }
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                        System.out.println("CSV-File hast das falsche Format: color;radius(Z.Z)");
-                    }
 
+                fields = line.split(";");
+                list.add(new Circle(Double.parseDouble(fields[1]), fields[0]));
                 }
-                list.add(new Circle(radius, color));
-
-            }
         }catch(Exception e){
             e.printStackTrace();
             System.out.println("Fehler beim lesen der Datei");
