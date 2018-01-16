@@ -105,6 +105,8 @@ public class WordCount {
             // Note: Closing the file inside the try-block in not ideal,
             // as an `Exception` would prevent this command from being
             // executed.
+            sr.close();
+            fr.close();
 
 
         } catch (Exception e) {
