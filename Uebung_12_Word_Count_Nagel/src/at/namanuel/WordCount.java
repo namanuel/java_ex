@@ -61,6 +61,7 @@ public class WordCount {
                         //
                         String processed = word.toLowerCase();
                         processed = processed.replaceAll("[\\W0-9]", "");
+                        processed = processed.replace("\\\\r\\\\n|\\\\r|\\\\n","");
                         if (words.containsKey(processed)) {
                             words.put(processed, words.get(processed) + 1);
                         } else {

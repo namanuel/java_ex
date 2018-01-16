@@ -7,6 +7,9 @@ public class Ship extends Vehicle {
     private int passenger;
     private int seats;
 
+    //Manuel: Zusätzlicher Parameter im Konstruktuer, weil ich einen Schifftypen dabei haben wollte und es im toString nicht fix
+    //vorgeben wollte
+
     public Ship(String shipType, String captainName, int passenger, int seats, boolean engine){
         this.captainName = captainName;
         this.passenger = passenger;
@@ -38,6 +41,7 @@ public class Ship extends Vehicle {
 
     @Override
     public String toString(){
+        //Manuel: Ich wollte den Schifftypen selber festlegen (leider gegen die Angabe)
         return shipType + "[p:" + passenger + "|s:" + seats +"|cap:" + captainName + "]";
     }
 }

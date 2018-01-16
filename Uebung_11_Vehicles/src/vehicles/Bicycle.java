@@ -3,6 +3,8 @@ package vehicles;
 import motorsports.Competitive;
 
 public class Bicycle extends Vehicle implements Competitive{
+
+    //Manuel: Sitzplatz nicht auf 1nes definiert, wenn keine Name vorhanden ist dann einfach "Bike on Track"
     private String driverName;
     private int passenger;
     private int seat;

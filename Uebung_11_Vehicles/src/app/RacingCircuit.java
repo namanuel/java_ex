@@ -7,6 +7,21 @@ import java.util.ArrayList;
 
 public class RacingCircuit {
     public static void main(String[] args){
+
+        /*
+        Manuel: Als Kommentar auf Moodle wurde geschrieben, Klassen nicht im korrekten Paket ist da das übergeordnete
+        Package gemeint?
+        Da ich mir die Klassen alle selbst angelegt habe, bevor  ich mitbekomme hab das die eigentlich schon alle vorgegeben sind.^^
+
+
+        Großer Fehler von mir, die Klassen so kommentieren wie in der Musterlösung mit alle Getter zusammen mit "Überschrift" usw.
+
+        Um den Code kürzer zu halten: definieren und hinzufügen zusammen machen, so wie in der Musterlösung
+
+
+         */
+
+
         // Create ArrayList of `Vehicle`s.
 
         ArrayList<Vehicle> starterList = new ArrayList<>();

@@ -3,10 +3,12 @@ package vehicles;
 import motorsports.Competitive;
 
 public class Car extends Vehicle implements Competitive{
+    //Manuel: gleich der Lösung (bis auf die Setter)
     private String copilotName;
     private String driverName;
     private int passenger;
     private int seats;
+
     public Car(String driverName, String copilotName, int seats){
         this.driverName = driverName;
         this.copilotName = copilotName;
@@ -34,15 +36,12 @@ public class Car extends Vehicle implements Competitive{
     public int getPassenger() {
         return passenger;
     }
-
     public void setPassenger(int passenger) {
         this.passenger = passenger;
     }
-
     public int getSeatCapacity () {
         return seats;
     }
-
     public void setSeatCapacity(int seats) {
         this.seats = seats;
     }
