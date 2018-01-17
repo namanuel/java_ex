@@ -73,66 +73,7 @@ public class Retry {
             javax.swing.JOptionPane.showMessageDialog(frame_message, "!!Invalid Input!!");
         }
 
-        // TODO (3)
-        // Try to ...
-        //
 
-
-        // TODO (4)
-        // Ask a user to enter a valid real number using
-        // a JOptionPane from Java Swing .
-
-
-        // TODO (5)
-        // Convert the entry to a `Double`.
-
-
-        // TODO (6)
-        // Catch NumerFormatExceptions and inform the user about
-        // the wrong entry, using a JOptionPane.
-        //
-
-
-        // TODO (2-6)
-        // Repeat user dialog and number conversion for
-        // second operand.
-        //
-
-
-        // TODO (7.1)
-        // Calculate sum.
-        //
-
-
-        // TODO (7.2)
-        // Calculate difference.
-        //
-
-
-        // TODO (7.3)
-        // Calculate product.
-        //
-
-
-        // TODO (7.4)
-        // Calculate quotient.
-        //
-
-
-        // TODO (8)
-        // Create message including both numbers entered,
-        // and the results of previous calculation (sum, difference, etc.).
-        //
-
-
-        // TODO (9.1)
-        // Print message to terminal.
-        //
-
-
-        // TODO (9.2)
-        // Print message using a JOptionPane.
-        //
     }
     static public void printInfo(Double number1, Double number2){
         Double quotient = 0.0;
@@ -150,6 +91,7 @@ public class Retry {
                 + "Difference: " + (number1 - number2) + "\n"
                 +"Product: " + (number1*number2) + "\n"
                 +"Quotient: " + quotient + output_message +"\n";
+        System.out.println(message);
         javax.swing.JOptionPane.showMessageDialog(new JFrame(), message);
     }
 }

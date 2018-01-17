@@ -2,6 +2,7 @@ package at.namanuel;
 
 
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.*;
 
 /**
@@ -29,15 +30,17 @@ public class WordCount {
         //
         Map<String, Integer> words = new HashMap<>();
         String line;
+        FileReader fr = null;
+        Scanner sr = null;
         try {
 
             // TODO (2)
             // Setup file input handling using the first
             // terminal argument.
             //
-            FileReader fr = new FileReader(args[0]);
+            fr = new FileReader(args[0]);
 
-            Scanner sr = new Scanner(fr);
+            sr = new Scanner(fr);
 
             while (sr.hasNext()) {
                 line = sr.nextLine();
@@ -111,6 +114,14 @@ public class WordCount {
 
         } catch (Exception e) {
             e.printStackTrace();
+        }
+        finally{
+            try {
+                fr.close();
+                sr.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
