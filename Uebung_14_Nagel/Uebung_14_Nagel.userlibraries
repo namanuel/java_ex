@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="JSON.org">
+    <archive path="I:/Java Programmieren/Java_Uebungen/Uebung_14_Nagel/lib/JSON.org.jar" />
+  </library>
+</eclipse-userlibraries>
+

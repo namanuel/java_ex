@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Circle/Circle.iml" filepath="$PROJECT_DIR$/Circle/Circle.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Uebung10/Uebung10.iml" filepath="$PROJECT_DIR$/Uebung10/Uebung10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java_Uebungen.iml" filepath="$PROJECT_DIR$/Java_Uebungen.iml" />
     </modules>
   </component>
 </project>
